@@ -1,0 +1,117 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+h2{
+	padding-top: 20px;
+	text-align: center;
+	font-family: Century Gothic;
+	color: #707070;
+}
+.container{
+	display: grid;
+	padding: 40px;
+	gap: 40px;
+	align-items: center;
+	grid-template:
+	"logo logo logo"
+	"afstand afstand afstand"
+	"brandstof brandstof brandstof"
+	"dagoverzicht dagoverzicht dagoverzicht"
+}
+.header_groot{
+	display: none;
+}
+.logo{
+	grid-area: logo;
+	height: 100px;
+}
+body{
+	background-color: #120F26;
+}
+.chart-1{
+	grid-area: afstand;
+	height: 400px;
+	width: 450px;
+	border-radius: 80px;
+	background-color: white;
+	box-shadow: 0px 0px 20px black;
+}
+.chart-2{
+	grid-area: brandstof;
+	height: 400px;
+	width: 450px;
+	border-radius: 80px;
+	background-color: white;
+}
+.chart-3{
+	grid area: dagoverzicht;
+	height: 400px;
+	width: 450px;
+	border-radius: 80px;
+	background-color: white;
+	margin-bottom: 200px;
+}
+@media screen and (min-width: 768px){
+	.container{
+	gap: 10px;
+	display: grid;
+	align-items: start;
+	grid-template:
+	"logo logo logo"
+	"dagoverzicht brandstof brandstof" 
+	"afstand afstand afstand"
+	}
+	.header_groot{
+	display: none;
+}
+	
+	chart-1{
+		grid-area: afstand;
+		grid-column: 1 / 3;
+	}
+	chart-2{
+		grid-area: brandstof;
+	}
+	chart-3{
+		grid-area: dagoverzicht;
+	}
+}
+@media screen and (min-width: 1280px){
+	.container{
+	gap: 10px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	align-items: start;
+	grid-template:
+	"logo logo logo "
+	"dagoverzicht brandstof afstand" 
+	}
+	.logo {
+		heigth: 150px;
+	}
+	.header{
+		display: none;
+	}
+	.header_groot{
+	display: inline;
+}
+	
+@media screen and (min-width: 1920){
+	.container{
+	gap: 10px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	align-items: start;
+	grid-template:
+	"logo logo "
+	"dagoverzicht brandstof afstand" 
+	}
+	.logo{
+		height: 200px;
+	}
+}
+
+
